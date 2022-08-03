@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -12,27 +13,27 @@
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle button" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a href="#">
+          <a class="main-nav__link" href="#">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="#">
+          <a class="main-nav__link" href="#">
             Фото и видео
           </a>
         </li>
         <li class="site-list__item">
-          <a href="#">
+          <a class="main-nav__link" href="#">
             Форма отзыва
           </a>
         </li>
         <li class="site-list__item">
-          <a href="#">
+          <a class="main-nav__link" href="#">
             Html Academy
           </a>
         </li>
@@ -40,10 +41,13 @@
     </nav>
   </header>
   <main class="main-container">
-    <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+    <section class="main-logo">
+      <h1 class="visually-hidden">Седона</h1>
+      <img class="main-logo__img" src="./img/welcome-sedona-logo.svg" width="282" height="214" alt="Добро пожаловать в Седону">
+    </section>
     <section class="slogan">
       <h2 class="slogan__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-      <p class="slogan-desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <p class="slogan__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages">
       <ul class="advantages__list">
@@ -52,7 +56,7 @@
             <h3 class="advantages__title">Настоящий городок</h3>
             <span class="advantages__number">— №1 —</span>
             <p class="advantages__desc">Седона не атракцион для туристов, там течёт своя жизнь</p>
-            <img class="advantdges-img" src="img/house-in-sedona.jpg" width="320" height="260"
+            <img class="advantadges-img" src="img/house-in-sedona.jpg" width="320" height="260"
               alt="Вид на дом в Седоне.">
             <ul class="advantages__second-list">
               <li class="advantages__item">
@@ -104,9 +108,9 @@
     </section>
     <section class="search-product">
       <h3 class="search-product__title">Заинтересовались?</h3>
-      <p class="search-product-desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшиепредложения гостиниц в
+      <p class="search-product__desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшиепредложения гостиниц в
         Седоне</p>
-      <button class="search-product-button button" type="button">Найти гостиницу</button>
+      <button class="search-product__button button" type="button">Найти гостиницу</button>
       <img class="search-product__map" src="img/map.jpg" width="320" height="350" alt="Карта Седоны">
     </section>
   </main>
