@@ -3,7 +3,17 @@
 }
 
 .page__body {
+  min-height: 100%;
   width: 320px;
   margin: auto;
   text-align: center;
+  background-color: #e7e5e5;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
