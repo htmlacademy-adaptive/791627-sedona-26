@@ -1,21 +1,49 @@
 .modal-review-error {
   background-color: @white;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 45px 42px 35px;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 50px 47px;
+  }
 }
 
 .modal-review-error__title {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
+  display: block;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-transform: uppercase;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    padding-bottom: 20px;
+  }
 }
 
 .modal-review-error__desc {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 35px;
+  }
+}
+
+.modal-review-error__button {
+  width: 180px;
+  padding: 18px 64px 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+    padding: 18px 108px 14px;
+  }
 }

@@ -1,21 +1,63 @@
 .modal-review-success {
   background-color: @white;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    width: 640px;
+  }
+}
+
+.modal-review-success__text {
+  padding: 39px 38px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 57px 98px 29px;
+  }
 }
 
 .modal-review-success__title {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
+  display: block;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-transform: uppercase;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 25px;
+    font-size: 30px;
+  }
 }
 
 .modal-review-success__desc {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+  }
+}
+
+.modal-review-success__button-wrapper {
+  padding: 20px 0;
+  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 91px;
+  }
+}
+
+.modal-review-success__button {
+  width: 280px;
+  padding: 18px 61px 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    padding: 18px 14px 14px;
+  }
 }

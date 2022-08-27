@@ -1,4 +1,6 @@
 .search-product {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   background-color: @white;
 
   @media (min-width: @tablet-width) {
@@ -9,25 +11,55 @@
 }
 
 .search-product__title {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
+  padding: 38px 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .search-product__desc {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: @grey;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0 20px 32px;
+}
+
+@media (min-width: @tablet-width) {
+  .search-product__text-wrapper {
+    padding: 61px 168px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search-product__text-wrapper {
+    padding: 61px 383px 0;
+  }
 }
 
 .search-product__button {
   width: 284px;
+  margin-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    width: 458px;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 458px;
+    margin-bottom: 66px;
+  }
+}
+
+.search-product__map {
+  width: 100%;
 }

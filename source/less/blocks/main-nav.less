@@ -1,21 +1,113 @@
 .main-nav {
-  background-color: @blue;
+  position: relative;
+  background-color: @white;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  width: 23px;
+  height: 4px;
+  background-color: @blue;
+  box-shadow: 0 9px 0 0 @blue, 0 18px 0 0 @blue;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: fade(@blue, 60%);
+  box-shadow: 0 9px 0 0 fade(@blue, 60%), 0 18px 0 0 fade(@blue, 60%);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@blue, 30%);
+  box-shadow: 0 9px 0 0 fade(@blue, 30%), 0 18px 0 0 fade(@blue, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+    background-color: @blue;
+  }
+
+  .main-nav--opened {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: @blue;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-image: url("../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-color: @blue;
+}
+
 
 .main-nav__list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-around;
+    padding: 0 28px 0 50px;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__item {
+  @media (max-width: @mobile-width-only) {
+    padding: 17px 0 12px;
+    box-shadow:
+      0 0 1px 0 fade(#010101, 20%),
+      inset 0 1px 0 fade(@white, 20%);
   }
 }
 
@@ -23,4 +115,8 @@
   text-decoration: none;
   color: @white;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    color: #000000;
+  }
 }

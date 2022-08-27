@@ -13,27 +13,28 @@
     <a class="main-header__logo" href="#">
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="#">
             Главная
           </a>
         </li>
-        <li class="site-list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="#">
             Фото и видео
           </a>
         </li>
-        <li class="site-list__item">
+        <li></li>
+        <li class="main-nav__item">
           <a class="main-nav__link" href="#">
             Форма отзыва
           </a>
         </li>
-        <li class="site-list__item">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="#">
             Html Academy
           </a>
@@ -57,49 +58,76 @@
           <div class="photo-cards__wrapper photo-card">
             <img class="photo-card__img" src="img/road-at-sunset.jpg" width="280" height="280"
               alt="Автодорога на фоне широких просторов на закате.">
-            <h3 class="photo-card__title">Неродные просторы</h3>
-            <p class="photo-card__author">Автор фото: Борис</p>
-            <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
-            <span class="photo-card__like-count">1350</span>
+            <div class="photo-card__desc">
+              <div class="photo-card__text">
+                <h3 class="photo-card__title">Неродные просторы</h3>
+                <p class="photo-card__author">Автор фото: Борис</p>
+              </div>
+              <div class="photo-card__counter">
+                <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
+                <span class="photo-card__like-count">1350</span>
+              </div>
+            </div>
           </div>
         </li>
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
             <img class="photo-card__img" src="img/native-vegation.jpg" width="280" height="280"
               alt="Необычное растение на фоне скал.">
-            <h3 class="photo-card__title">Местная растительность</h3>
-            <p class="photo-card__author">Автор фото: Сергей</p>
-            <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
-            <span class="photo-card__like-count">143</span>
+            <div class="photo-card__desc">
+              <div class="photo-card__text">
+                <h3 class="photo-card__title">Местная растительность</h3>
+                <p class="photo-card__author">Автор фото: Сергей</p>
+              </div>
+              <div class="photo-card__counter">
+                <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
+                <span class="photo-card__like-count">143</span>
+              </div>
+            </div>
           </div>
         </li>
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
             <img class="photo-card__img" src="img/road-to-north.jpg" width="280" height="280"
               alt="Извилистая автодорога идущая через лесистую местность.">
-            <h3 class="photo-card__title">Дорога на север</h3>
-            <p class="photo-card__author">Автор фото: Петр</p>
-            <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
-            <span class="photo-card__like-count">96</span>
+            <div class="photo-card__desc">
+              <div class="photo-card__text">
+                <h3 class="photo-card__title">Дорога на север</h3>
+                <p class="photo-card__author">Автор фото: Петр</p>
+              </div>
+              <div class="photo-card__counter">
+                <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
+                <span class="photo-card__like-count">96</span>
+              </div>
+            </div>
           </div>
         </li>
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
             <img class="photo-card__img" src="img/devil-bridge-catalog.jpg" width="280" height="280"
               alt="Скала по внешнему виду похожая мост.">
-            <h3 class="photo-card__title">Мост дьявола</h3>
-            <p class="photo-card__author">Автор фото: Антон</p>
-            <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
-            <span class="photo-card__like-count">234</span>
+            <div class="photo-card__desc">
+              <div class="photo-card__text">
+                <h3 class="photo-card__title">Мост дьявола</h3>
+                <p class="photo-card__author">Автор фото: Антон</p>
+              </div>
+              <div class="photo-card__counter">
+                <button class="photo-card__like-button" type="button"><span class="visually-hidden">Лайк</span></button>
+                <span class="photo-card__like-count">234</span>
+              </div>
+            </div>
           </div>
         </li>
       </ul>
     </section>
     <section class="tagline-video">
-      <h2 class="tagline-video__title">Все еще сомневаетесь?</h2>
-      <p class="tagline-video__desc">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
-        раз!</p>
-      <video src="#" width="280" height="177" poster="./img/video-catalog.jpg"></video>
+      <div class="tagline-video__text">
+        <h2 class="tagline-video__title">Все еще сомневаетесь?</h2>
+        <p class="tagline-video__desc">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+          очередной
+          раз!</p>
+      </div>
+      <video class="tagline-video__video" src="#" width="280" height="177" poster="./img/video-catalog.jpg"></video>
       <span class="visually-hidden">Видеопрезентация</span>
     </section>
   </main>
@@ -110,19 +138,26 @@
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link-vkontakte" href="#"><span class="visually-hidden">Вкотакте</span></a>
+          <a class="social__link social__link-vkontakte button" href="#"><span
+              class="visually-hidden">Вкотакте</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link-telegram" href="#"><span class="visually-hidden">Телеграм</span></a>
+          <a class="social__link social__link-telegram button" href="#"><span
+              class="visually-hidden">Телеграм</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link-youtube" href="#"><span class="visually-hidden">Youtube</span></a>
+          <a class="social__link social__link-youtube button" href="#"><span class="visually-hidden">Youtube</span></a>
         </li>
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__link" href="#"><span class="visually-hidden">Логотип разработчика</span></a>
+      <a class="copyright__link" href="#">
+        <span class="copyright__text">Разработано</span>
+        <svg class="copyright__icon" width="24" height="29" viewBox="0 0 24 29" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.1338 0H12.0446L0 1.19062V22.1965L12.0446 29L24 22.1965V1.19062L12.1338 0ZM22.3048 10.2903L12.0446 4.50733V4.42229H11.9554L11.8662 4.33724V4.42229L1.69517 10.2903V2.63636L11.9554 1.61584L22.3048 2.63636V10.2903ZM11.9554 5.78299L22.2156 11.4809L18.2007 13.6921L11.8662 10.1202V11.3109L17.1301 14.2874L16.3271 14.7126L11.8662 12.1613V13.3519L15.2565 15.3079L14.5428 15.7331L11.8662 14.2023V15.393L13.5613 16.3284L11.9554 17.2639L1.78439 11.566L11.9554 5.78299ZM1.69517 12.8416L11.8662 18.6246V19.4751L4.81784 15.478V16.6686L11.9554 20.7507V21.6862L4.81784 17.6891V18.8798L11.9554 22.9619L19.1822 18.7947V14.3724L22.2156 12.6716V21.176L11.9554 27.044L1.69517 21.261V12.8416Z" />
+        </svg><span class="visually-hidden">Логотип разработчика</span></a>
     </div>
   </footer>
 </body>
