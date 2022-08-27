@@ -2,6 +2,8 @@
   background-color: @white;
   text-align: left;
   padding: 0 20px;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -17,8 +19,9 @@
 }
 
 .review-form__group {
+  margin: 0;
   padding: 0;
-  border: 0 none;
+  border: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -27,45 +30,164 @@
 }
 
 .review-form__label {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  padding-left: 16px;
 }
 
 .review-form__legend {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-}
-
-.review-form__label-radio {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  padding: 24px 0 20px;
 
   @media (min-width: @tablet-width) {
-    width: 280px;
+    font-size: 21px;
   }
 }
 
-.review-form__label-checkbox {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
+.review-form__input {
+  margin-bottom: 16px;
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
+}
+
+.review-form__contacts {
+  position: relative;
+
+  & input::placeholder {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.review-form__contacts::before {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  top: 22px;
+  right: 0;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    top: 21px;
+  }
+}
+
+.review-form__contacts::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  top: 118px;
+  right: 0;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: @tablet-width) {
+    top: 116px;
+  }
+}
+
+.review-form__radio-control {
+  appearance: none;
+  margin: 0;
+  background-color: #f2f2f2;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.review-form__radio-control::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #333333;
+  transform: scale(0);
+}
+
+.review-form__radio-control:checked::before {
+  transform: scale(1);
+}
+
+.review-form__radio-label {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  display: grid;
+  grid-template-columns: 46px 3fr;
+  column-gap: 16px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    margin-bottom: 16px;
+  }
+}
+
+// Checkbox
+
+.review-form__checkbox {
+  appearance: none;
+  margin: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+}
+
+.review-form__checkbox::before {
+  content: "";
+  width: 26px;
+  height: 16px;
+  background-image: url("../img/icon-checkbox.svg");
+  background-repeat: no-repeat;
+  transform: scale(0);
+}
+
+.review-form__checkbox:checked::before {
+  transform: scale(1);
+}
+
+.review-form__checkbox-label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  display: grid;
+  grid-template-columns: 46px 3fr;
+  column-gap: 16px;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     width: 224px;
+    margin-bottom: 16px;
   }
 }
 
@@ -76,6 +198,14 @@
   min-height: 150px;
   padding: 16px;
   align-self: center;
+  border: none;
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     width: 648px;
@@ -88,13 +218,29 @@
 
 .review-form__button {
   width: 281px;
-  height: 58px;
+  padding: 18px 33px 14px;
 
   @media (min-width: @tablet-width) {
+    width: 324px;
     margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 384px;
     margin-left: 96px;
+  }
+}
+
+.review-form__mark {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  opacity: 0.6;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 96px;
   }
 }

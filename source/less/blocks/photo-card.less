@@ -1,28 +1,102 @@
 .photo-card {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   text-align: left;
+  position: relative;
+}
+
+.photo-card__img {
+  display: block;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photo-card__desc {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    padding: 22px 20px 15px;
+    background-color: #f2f2f2;
+  }
+
+  .photo-card__counter {
+    position: relative;
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-card__desc {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: @white;
+    background-color: fade(@black, 30%);
+  }
 }
 
 .photo-card__title {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 5px;
 }
 
 .photo-card__author {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
+  padding-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 2;
+    padding: 0;
+  }
+}
+
+.photo-card__like-button {
+  width: 23px;
+  height: 21px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  z-index: 2;
+  background-color: @white;
+  cursor: pointer;
+  border: none;
+  background-image: url("../img/icon-like.svg");
+  opacity: 0.3;
+
+  @media (min-width: @tablet-width) {
+    top: -4px;
+    left: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+    background-image: url("../img/icon-like-desktop.svg");
+    opacity: 1;
+  }
 }
 
 .photo-card__like-count {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
+  display: inline-block;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
+  padding: 0 0 25px 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }

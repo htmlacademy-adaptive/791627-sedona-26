@@ -1,6 +1,14 @@
 .slogan {
   background-color: @white;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 358px;
+  }
 }
 
 .slogan__title {
@@ -11,6 +19,18 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  padding: 32px 0 35px;
+
+  @media (min-width: @tablet-width) {
+    & br {
+      display: none;
+    }
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 58px;
+  }
 }
 
 .slogan__desc {
@@ -20,4 +40,10 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 0 0 32px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 44px;
+  }
 }

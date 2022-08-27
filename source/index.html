@@ -14,27 +14,28 @@
       <a class="main-header__logo" href="#">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#">
               Главная
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#">
               Фото и видео
             </a>
           </li>
-          <li class="site-list__item">
+          <li></li>
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#">
               Форма отзыва
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a class="main-nav__link" href="#">
               Html Academy
             </a>
@@ -48,41 +49,47 @@
         alt="Добро пожаловать в Седону">
     </section>
     <section class="slogan">
-      <h2 class="slogan__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <h2 class="slogan__title">Седона — небольшой <br>городок в Аризоне, заслуживающий большего!</h2>
       <p class="slogan__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages">
       <ul class="advantages__list">
         <li class="advantages__item">
           <div class="advantages__wrapper advantages__wrapper-1">
-            <div class="advatages_text-wrapper">
+            <div class="advantages__text-wrapper">
               <h3 class="advantages__title">Настоящий городок</h3>
               <span class="advantages__number">— №1 —</span>
               <p class="advantages__desc">Седона не атракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="advantadges-img" src="img/house-in-sedona.jpg" width="320" height="260"
+            <img class="advantages__img" src="img/house-in-sedona.jpg" width="320" height="260"
               alt="Вид на дом в Седоне.">
             <ul class="advantages__second-list">
-              <li class="advantages__item">
-                <h4 class="advantages__title">Жильё</h4>
-                <p class="advantages__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <li class="advantages__item advantages__housing">
+                <div class="advantages__text-wrapper">
+                  <h4 class="advantages__title">Жильё</h4>
+                  <p class="advantages__desc">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </div>
               </li>
-              <li class="advantages__item">
-                <h4 class="advantages__title">Еда</h4>
-                <p class="advantages__desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <li class="advantages__item advantages__eating">
+                <div class="advantages__text-wrapper">
+                  <h4 class="advantages__title">Еда</h4>
+                  <p class="advantages__desc">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </div>
               </li>
-              <li class="advantages__item">
-                <h4 class="advantages__title">Сувениры</h4>
-                <p class="advantages__desc">Не только китайского, но и местного производства!</p>
+              <li class="advantages__item advantages__souvenir">
+                <div class="advantages__text-wrapper">
+                  <h4 class="advantages__title">Сувениры</h4>
+                  <p class="advantages__desc">Не только китайского, но и местного производства!</p>
+                </div>
               </li>
             </ul>
           </div>
         </li>
         <li class="advantages__item">
           <div class="advantages__wrapper advantages__wrapper-2">
-            <img class="advantdges-img" src="img/devils-bridge.jpg" width="320" height="260"
+            <img class="advantages__img" src="img/devils-bridge.jpg" width="320" height="260"
               alt="Мост дьявола в Седоне.">
-            <div class="advatages_text-wrapper">
+            <div class="advantages__text-wrapper">
               <h3 class="advantages__title">Там есть мост дьявола</h3>
               <span class="advantages__number">— №2 —</span>
               <p class="advantages__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
@@ -90,32 +97,35 @@
           </div>
         </li>
         <li class="advantages__item">
-          <div class="advantages__wrapper advantages__wrapper-3">
+          <div class="advantages__text-wrapper advantages__wrapper-3">
             <h3 class="advantages__title">Небольшая площадь</h3>
             <span class="advantages__number">— №3 —</span>
             <p class="advantages__desc">Все интересные места находятся очень близко</p>
           </div>
         </li>
         <li class="advantages__item">
-          <div class="advantages__wrapper advantages__wrapper-4">
+          <div class="advantages__text-wrapper advantages__wrapper-4">
             <h3 class="advantages__title">Красивая дорога</h3>
             <span class="advantages__number">— №4 —</span>
             <p class="advantages__desc">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
         </li>
         <li class="advantages__item">
-          <div class="advantages__wrapper advantages__wrapper-5">
+          <div class="advantages__text-wrapper advantages__wrapper-5">
             <h3 class="advantages__title">Мало туристов</h3>
             <span class="advantages__number">— №5 —</span>
-            <p class="advantages__desc">Большинство едет в гранд каньони толпится там</p>
+            <p class="advantages__desc">Большинство едет в гранд каньон и толпится там</p>
           </div>
         </li>
       </ul>
     </section>
     <section class="search-product">
-      <h3 class="search-product__title">Заинтересовались?</h3>
-      <p class="search-product__desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшиепредложения гостиниц в
-        Седоне</p>
+      <div class="search-product__text-wrapper">
+        <h3 class="search-product__title">Заинтересовались?</h3>
+        <p class="search-product__desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшиепредложения гостиниц
+          в
+          Седоне</p>
+      </div>
       <button class="search-product__button button" type="button">Найти гостиницу</button>
       <img class="search-product__map" src="img/map.jpg" width="320" height="350" alt="Карта Седоны">
     </section>
@@ -127,19 +137,27 @@
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link-vkontakte" href="#"><span class="visually-hidden">Вкотакте</span></a>
+          <a class="social__link social__link-vkontakte button" href="#">
+            <span class="visually-hidden">Вкотакте</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link-telegram" href="#"><span class="visually-hidden">Телеграм</span></a>
+          <a class="social__link social__link-telegram button" href="#"><span
+              class="visually-hidden">Телеграм</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link-youtube" href="#"><span class="visually-hidden">Youtube</span></a>
+          <a class="social__link social__link-youtube button" href="#"><span class="visually-hidden">Youtube</span></a>
         </li>
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__link" href="#"><span class="visually-hidden">Логотип разработчика</span></a>
+      <a class="copyright__link" href="#">
+        <span class="copyright__text">Разработано</span>
+        <svg class="copyright__icon" width="24" height="29" viewBox="0 0 24 29" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12.1338 0H12.0446L0 1.19062V22.1965L12.0446 29L24 22.1965V1.19062L12.1338 0ZM22.3048 10.2903L12.0446 4.50733V4.42229H11.9554L11.8662 4.33724V4.42229L1.69517 10.2903V2.63636L11.9554 1.61584L22.3048 2.63636V10.2903ZM11.9554 5.78299L22.2156 11.4809L18.2007 13.6921L11.8662 10.1202V11.3109L17.1301 14.2874L16.3271 14.7126L11.8662 12.1613V13.3519L15.2565 15.3079L14.5428 15.7331L11.8662 14.2023V15.393L13.5613 16.3284L11.9554 17.2639L1.78439 11.566L11.9554 5.78299ZM1.69517 12.8416L11.8662 18.6246V19.4751L4.81784 15.478V16.6686L11.9554 20.7507V21.6862L4.81784 17.6891V18.8798L11.9554 22.9619L19.1822 18.7947V14.3724L22.2156 12.6716V21.176L11.9554 27.044L1.69517 21.261V12.8416Z" />
+        </svg>
+        <span class="visually-hidden">Логотип разработчика</span></a>
     </div>
   </footer>
 </body>

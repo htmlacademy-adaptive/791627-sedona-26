@@ -1,21 +1,40 @@
 .review-tagline {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   background-color: @white;
+  text-transform: uppercase;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 166px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 382px 67px;
+  }
 }
 
 .review-tagline__title {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 36px 0 24px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    font-size: 30px;
+  }
 }
 
 .review-tagline__desc {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
 }

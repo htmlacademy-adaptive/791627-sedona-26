@@ -1,30 +1,52 @@
 .tagline-video {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
   background-color: @white;
   padding: 20px;
 
   @media (min-width: @tablet-width) {
     padding: 0 60px;
+
+    &__text {
+      padding: 58px 102px 66px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 60px 200px;
+    padding: 0;
+
+    &__text {
+      padding: 61px 377px 66px;
+    }
   }
 }
 
 .tagline-video__title {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .tagline-video__desc {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.tagline-video__video {
+  width: 100%;
 }
