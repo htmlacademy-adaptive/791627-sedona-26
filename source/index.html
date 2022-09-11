@@ -6,6 +6,10 @@
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -25,13 +29,13 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link" href="catalog.html">
               Фото и видео
             </a>
           </li>
           <li></li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link" href="form.html">
               Форма отзыва
             </a>
           </li>
@@ -45,8 +49,11 @@
     </header>
     <section class="main-logo">
       <h1 class="visually-hidden">Седона</h1>
+      <picture>
+        <source media="(min-width: 768px)" srcset="./img/welcome-sedona-logo-big.svg" width="461" height="350">
       <img class="main-logo__img" src="./img/welcome-sedona-logo.svg" width="282" height="214"
         alt="Добро пожаловать в Седону">
+      </picture>
     </section>
     <section class="slogan">
       <h2 class="slogan__title">Седона — небольшой <br>городок в Аризоне, заслуживающий большего!</h2>
@@ -61,8 +68,12 @@
               <span class="advantages__number">— №1 —</span>
               <p class="advantages__desc">Седона не атракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img class="advantages__img" src="img/house-in-sedona.jpg" width="320" height="260"
-              alt="Вид на дом в Седоне.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/house-in-sedona-desktop.jpg 1x, img/house-in-sedona-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/house-in-sedona-tablet.jpg 1x, img/house-in-sedona-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/house-in-sedona.jpg" srcset="img/house-in-sedona@2x.jpg 2x" width="320" height="260"
+                alt="Вид на дом в Седоне.">
+            </picture>
             <ul class="advantages__second-list">
               <li class="advantages__item advantages__housing">
                 <div class="advantages__text-wrapper">
@@ -87,13 +98,17 @@
         </li>
         <li class="advantages__item">
           <div class="advantages__wrapper advantages__wrapper-2">
-            <img class="advantages__img" src="img/devils-bridge.jpg" width="320" height="260"
-              alt="Мост дьявола в Седоне.">
             <div class="advantages__text-wrapper">
               <h3 class="advantages__title">Там есть мост дьявола</h3>
               <span class="advantages__number">— №2 —</span>
               <p class="advantages__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/devils-bridge-desktop.jpg 1x, img/devils-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/devils-bridge-tablet.jpg 1x, img/devils-bridge-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/devils-bridge.jpg" srcset="img/devils-bridge@2x.jpg 2x" width="320" height="260"
+                alt="Мост дьявола в Седоне.">
+            </picture>
           </div>
         </li>
         <li class="advantages__item">
@@ -127,7 +142,8 @@
           Седоне</p>
       </div>
       <button class="search-product__button button" type="button">Найти гостиницу</button>
-      <img class="search-product__map" src="img/map.jpg" width="320" height="350" alt="Карта Седоны">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104770.20079183741!2d-111.8651782185491!3d34.854499193968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1662908083629!5m2!1sru!2sru" width="320" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта Седоны">
+      </iframe>
     </section>
   </main>
   <footer class="main-footer">
