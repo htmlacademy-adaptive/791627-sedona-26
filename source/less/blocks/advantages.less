@@ -62,10 +62,17 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .advantages__wrapper-2 .advantages__text-wrapper {
+    order: 2;
+  }
+}
+
+
 .advantages__second-list {
   list-style-type: none;
   background-color: @white;
-  color: @grey;
+  color: @gray;
   padding: 0 0 52px 0;
   text-align: left;
 
@@ -177,7 +184,7 @@
 .advantages__wrapper-3,
 .advantages__wrapper-4,
 .advantages__wrapper-5 {
-  background-color: #eeeeee;
+  background-color: @light-gray-2;
 
   @media (min-width: @tablet-width) {
     width: 256px;

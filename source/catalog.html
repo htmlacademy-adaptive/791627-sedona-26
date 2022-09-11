@@ -6,6 +6,10 @@
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -19,7 +23,7 @@
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
+          <a class="main-nav__link" href="index.html">
             Главная
           </a>
         </li>
@@ -30,7 +34,7 @@
         </li>
         <li></li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
+          <a class="main-nav__link" href="form.html">
             Форма отзыва
           </a>
         </li>
@@ -45,7 +49,11 @@
   <main class="main-container">
     <section class="catalog-main-logo">
       <h1 class="visually-hidden">Седона</h1>
-      <img src="./img/catalog-sedona-logo.svg" width="229" height="39" alt="Седона">
+      <picture>
+        <source media="(min-width: 768px)" srcset="img/catalog-sedona-logo.svg" width="457" height="78">
+        <img src="./img/catalog-sedona-logo.svg" width="229" height="39" alt="Седона">
+      </picture>
+
     </section>
     <section class="tagline">
       <h2 class="tagline__title">Фото и видео</h2>
@@ -56,8 +64,13 @@
       <ul class="photo-cards__list">
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
-            <img class="photo-card__img" src="img/road-at-sunset.jpg" width="280" height="280"
-              alt="Автодорога на фоне широких просторов на закате.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/road-at-sunset-desktop.jpg 1x, img/road-at-sunset-desktop@2x.jpg 2x,">
+              <source media="(min-width: 768px)" srcset="img/road-at-sunset-tablet.jpg 1x, img/road-at-sunset-tablet@2x.jpg 2x">
+              <img class="photo-card__img" src="img/road-at-sunset.jpg" srcset="img/road-at-sunset@2x.jpg 2x" width="280" height="280"
+                alt="Автодорога на фоне широких просторов на закате.">
+            </picture>
+            <source>
             <div class="photo-card__desc">
               <div class="photo-card__text">
                 <h3 class="photo-card__title">Неродные просторы</h3>
@@ -72,8 +85,12 @@
         </li>
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
-            <img class="photo-card__img" src="img/native-vegation.jpg" width="280" height="280"
-              alt="Необычное растение на фоне скал.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/native-vegation-desktop.jpg 1x, img/native-vegation-desktop@2x.jpg 2x,">
+              <source media="(min-width: 768px)" srcset="img/native-vegation-tablet.jpg 1x, img/native-vegation-tablet@2x.jpg 2x">
+              <img class="photo-card__img" src="img/native-vegation.jpg" srcset="img/native-vegation@2x.jpg 2x" width="280" height="280"
+                alt="Необычное растение на фоне скал.">
+            </picture>
             <div class="photo-card__desc">
               <div class="photo-card__text">
                 <h3 class="photo-card__title">Местная растительность</h3>
@@ -88,8 +105,12 @@
         </li>
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
-            <img class="photo-card__img" src="img/road-to-north.jpg" width="280" height="280"
-              alt="Извилистая автодорога идущая через лесистую местность.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/road-to-north-desktop.jpg 1x, img/road-to-north-desktop@2x.jpg 2x,">
+              <source media="(min-width: 768px)" srcset="img/road-to-north-tablet.jpg 1x, img/road-to-north-tablet@2x.jpg 2x">
+              <img class="photo-card__img" src="img/road-to-north.jpg" srcset="img/road-to-north@2x.jpg 2x" width="280" height="280"
+                alt="Извилистая автодорога идущая через лесистую местность.">
+            </picture>
             <div class="photo-card__desc">
               <div class="photo-card__text">
                 <h3 class="photo-card__title">Дорога на север</h3>
@@ -104,8 +125,12 @@
         </li>
         <li class="photo-cards__item">
           <div class="photo-cards__wrapper photo-card">
-            <img class="photo-card__img" src="img/devil-bridge-catalog.jpg" width="280" height="280"
-              alt="Скала по внешнему виду похожая мост.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/devil-bridge-catalog-desktop.jpg 1x, img/devil-bridge-catalog-desktop@2x.jpg 2x,">
+              <source media="(min-width: 768px)" srcset="img/devil-bridge-catalog-tablet.jpg 1x, img/devil-bridge-catalog-tablet@2x.jpg 2x">
+              <img class="photo-card__img" src="img/devil-bridge-catalog.jpg" srcset="img/devil-bridge-catalog@2x.jpg 2x" width="280" height="280"
+                alt="Скала по внешнему виду похожая мост.">
+            </picture>
             <div class="photo-card__desc">
               <div class="photo-card__text">
                 <h3 class="photo-card__title">Мост дьявола</h3>
@@ -127,7 +152,12 @@
           очередной
           раз!</p>
       </div>
-      <video class="tagline-video__video" src="#" width="280" height="177" poster="./img/video-catalog.jpg"></video>
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/video-catalog-desktop.jpg">
+        <source media="(min-width: 768px)" srcset="img/video-catalog-tablet.jpg">
+        <img class="tagline-video__poster" src="img/video-catalog.jpg" alt="Видеопрезентация">
+      </picture>
+      <video class="tagline-video__video" src="#"></video>
       <span class="visually-hidden">Видеопрезентация</span>
     </section>
   </main>
