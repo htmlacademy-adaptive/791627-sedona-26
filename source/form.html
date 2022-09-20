@@ -33,10 +33,10 @@
     </symbol>
   </svg>
   <header class="main-header">
-    <a class="main-header__logo" href="#">
+    <a class="main-header__logo" href="index.html">
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
     </a>
-    <nav class="main-nav  main-nav--closed">
+    <nav class="main-nav main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -89,9 +89,9 @@
       </fieldset>
       <fieldset class="review-form__group review-form__contacts">
         <legend class="review-form__legend review-form__contacts-legend">Контактная информация:</legend>
-        <label class="review-form__label" for="phone">Контактный телефон*:</label>
+        <label class="review-form__label" for="phone" type="tel">Контактный телефон*:</label>
         <input class="review-form__input input" type="number" id="phone" placeholder="Введите телефон">
-        <label class="review-form__label" for="email">Электронная почта*:</label>
+        <label class="review-form__label" for="email" type="email">Электронная почта*:</label>
         <input class="review-form__input input" type="email" id="email" placeholder="Введите e-mail">
       </fieldset>
       <fieldset class="review-form__group radio-group">
@@ -155,7 +155,7 @@
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <a class="copyright__link" href="#">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
         <svg class="copyright__icon" width="24" height="29" viewBox="0 0 24 29" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">
