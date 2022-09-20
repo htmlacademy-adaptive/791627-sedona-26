@@ -4,12 +4,27 @@
   font-style: normal;
   text-transform: uppercase;
   padding: 45px 42px 35px;
+  margin: auto;
 
   @media (min-width: @tablet-width) {
     box-sizing: border-box;
     width: 400px;
     padding: 50px 47px;
   }
+}
+
+.modal-container-error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 116px;
+}
+
+.modal-container-error--close {
+  display: none;
 }
 
 .modal-review-error__title {

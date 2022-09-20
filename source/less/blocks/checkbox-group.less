@@ -1,17 +1,72 @@
 .checkbox-group {
-  padding-bottom: 24px;
+  @media (max-width: @mobile-width-only) {
+    &__legend {
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: -20px;
+        width: 320px;
+        height: 1px;
+        background-color: @light-gray-5;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    column-gap: 28px;
+
+    &__legend {
+      padding: 20px 169px 28px;
+      grid-column: 1 / -1;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 45px;
+        left: 0;
+        width: 123px;
+        height: 1px;
+        background-color: @light-gray-6;
+
+        @media (min-width: @desktop-width) {
+          width: 280px;
+          left: -50px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 45px;
+        right: 0;
+        width: 123px;
+        height: 1px;
+        background-color: @light-gray-6;
+
+        @media (min-width: @desktop-width) {
+          width: 280px;
+          right: -10px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__legend {
+      padding: 20px 310px 60px 260px;
+    }
+
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .checkbox-group .review-form__legend {
-    padding: 0 170px 28px;
+    justify-content: flex-start;
+    padding-left: 44px;
   }
 }

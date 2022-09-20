@@ -97,8 +97,12 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding: 0 28px 0 50px;
-    justify-content: space-between;
+    margin-left: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    margin-left: 81px;
   }
 }
 
@@ -109,14 +113,56 @@
       0 0 1px 0 fade(#010101, 20%),
       inset 0 1px 0 fade(@white, 20%);
   }
+
+  @media (min-width: @tablet-width) {
+    &:first-child {
+      margin-right: 56px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 186px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 32px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      margin-right: 142px;
+    }
+
+    &:nth-child(2) {
+      margin-right: 360px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 120px;
+    }
+  }
 }
 
 .main-nav__link {
   text-decoration: none;
   color: @white;
   text-transform: uppercase;
+  padding: 10px;
 
   @media (min-width: @tablet-width) {
     color: @black;
+
+    &:hover {
+      color: @blue;
+    }
+
+    &:active {
+      color: @black;
+      opacity: 0.3;
+    }
+
+    &--current {
+      color: @brown;
+    }
   }
 }

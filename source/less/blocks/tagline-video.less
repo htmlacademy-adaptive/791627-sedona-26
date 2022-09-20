@@ -2,13 +2,13 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   background-color: @white;
-  padding: 20px;
+  padding: 20px 20px 0;
 
   @media (min-width: @tablet-width) {
     padding: 0 60px;
 
     &__text {
-      padding: 58px 102px 66px;
+      padding: 58px 80px 66px;
     }
   }
 
@@ -16,7 +16,7 @@
     padding: 0;
 
     &__text {
-      padding: 61px 377px 66px;
+      padding: 58px 350px 66px;
     }
   }
 }
@@ -27,9 +27,10 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 34px;
     font-size: 30px;
   }
 }
@@ -40,15 +41,24 @@
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 38px;
+  padding: 0 20px 38px;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding-bottom: 22px;
   }
 }
 
 .tagline-video__poster {
-  text-align: center;
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 90px;
+  }
 }
 
 .tagline-video__video {

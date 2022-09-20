@@ -10,7 +10,6 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -31,9 +30,15 @@
 }
 
 .main-footer__hashtag {
+  margin-top: 29px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .main_footer__social {
@@ -42,7 +47,13 @@
 
 .copyright__link {
   text-decoration: none;
+  display: block;
   color: @black;
+  margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .copyright__link:hover {
@@ -51,4 +62,13 @@
 
 .copyright__link:active {
   color: @gray-copyright;
+}
+
+.copyright__icon {
+  vertical-align: middle;
+  margin-left: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 8px;
+  }
 }

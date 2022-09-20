@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -51,9 +51,8 @@
             Фото и видео
           </a>
         </li>
-        <li></li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">
+          <a class="main-nav__link main-nav__link--current" href="#">
             Форма отзыва
           </a>
         </li>
@@ -80,7 +79,7 @@
     </section>
     <form class="review-form">
       <fieldset class="review-form__group review-form__name">
-        <legend class="review-form__legend">Представьтесь:</legend>
+        <legend class="review-form__legend review-form__name-legend">Представьтесь:</legend>
         <label class="review-form__label" for="name">Имя*:</label>
         <input class="review-form__input input" type="text" id="name" placeholder="Пётр">
         <label class="review-form__label" for="surname">Фамилия*:</label>
@@ -89,35 +88,35 @@
         <input class="review-form__input input" type="text" id="patronymic" placeholder="Викторович">
       </fieldset>
       <fieldset class="review-form__group review-form__contacts">
-        <legend class="review-form__legend">Контактная информация:</legend>
+        <legend class="review-form__legend review-form__contacts-legend">Контактная информация:</legend>
         <label class="review-form__label" for="phone">Контактный телефон*:</label>
         <input class="review-form__input input" type="number" id="phone" placeholder="Введите телефон">
         <label class="review-form__label" for="email">Электронная почта*:</label>
         <input class="review-form__input input" type="email" id="email" placeholder="Введите e-mail">
       </fieldset>
       <fieldset class="review-form__group radio-group">
-        <legend class="review-form__legend">Ваше Общее впечатление:</legend>
-        <label class="review-form__radio-label"><input class="review-form__radio-control" type="radio" checked>Скорее
-          положительное</label><br>
-        <label class="review-form__radio-label"><input class="review-form__radio-control" type="radio">Скорее
-          отрицательное</label><br>
-        <label class="review-form__radio-label"><input class="review-form__radio-control" type="radio">Затрудняюсь
+        <legend class="review-form__legend radio-group__legend">Ваше Общее впечатление:</legend>
+        <label class="review-form__radio-label"><input class="review-form__radio-control" type="radio" name="radio" checked>Скорее
+          положительное</label>
+        <label class="review-form__radio-label"><input class="review-form__radio-control" type="radio" name="radio">Скорее
+          отрицательное</label>
+        <label class="review-form__radio-label"><input class="review-form__radio-control" type="radio" name="radio">Затрудняюсь
           ответить</label>
       </fieldset>
       <fieldset class="review-form__group checkbox-group">
-        <legend class="review-form__legend">Посещенные достопримечательности:</legend>
+        <legend class="review-form__legend checkbox-group__legend">Посещенные достопримечательности:</legend>
         <label class="review-form__checkbox-label"><input class="review-form__checkbox" type="checkbox" checked>Мост
-          Дьявола</label><br>
+          Дьявола</label>
         <label class="review-form__checkbox-label"><input class="review-form__checkbox" type="checkbox"
-            checked>Гора-Колокол</label><br>
+            checked>Гора-Колокол</label>
         <label class="review-form__checkbox-label"><input class="review-form__checkbox" type="checkbox"
-            checked>Слайд-парк</label><br>
+            checked>Слайд-парк</label>
         <label class="review-form__checkbox-label"><input class="review-form__checkbox" type="checkbox">Красные
           скалы</label>
       </fieldset>
       <fieldset class="review-form__group textarea-group">
-        <legend class="review-form__legend">Опишите свои эмоции:</legend>
-        <textarea class="review-form__textarea" placeholder="Опишите подробно все свои восторги "></textarea>
+        <legend class="review-form__legend textarea-group__legend">Опишите свои эмоции:</legend>
+        <textarea class="review-form__textarea input" placeholder="Опишите подробно все свои восторги "></textarea>
       </fieldset>
       <button class="review-form__button button" type="submit">Отправить отзыв</button>
       <p class="review-form__mark">* — обязательные поля</p>
@@ -166,23 +165,26 @@
     </div>
   </footer>
 
-  <div class="modal-review-error modal-review-error--close">
-    <b class="modal-review-error__title">Что-то пошло не&nbsp;так!</b>
-    <p class="modal-review-error__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="modal-review-error__button button" type="button">ОК</button>
-  </div>
-
-  <div class="modal-review-success modal-review-success--close">
-    <div class="modal-review-success__text">
-      <b class="modal-review-success__title">Ваш отзыв отправлен!</b>
-      <p class="modal-review-success__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
-        опубликуем его на сайте.</p>
-    </div>
-    <div class="modal-review-success__button-wrapper">
-      <button class="modal-review-success__button button" type="button">Закрыть окно</button>
+  <div class="modal-container-error modal-container-error--close">
+    <div class="modal-review-error modal-review-error--close">
+      <b class="modal-review-error__title">Что-то пошло не&nbsp;так!</b>
+      <p class="modal-review-error__desc">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="modal-review-error__button button" type="button">ОК</button>
     </div>
   </div>
 
+  <div class="modal-container-success modal-container-success--close">
+    <div class="modal-review-success modal-review-success--close">
+      <div class="modal-review-success__text">
+        <b class="modal-review-success__title">Ваш отзыв отправлен!</b>
+        <p class="modal-review-success__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы
+          опубликуем его на сайте.</p>
+      </div>
+      <div class="modal-review-success__button-wrapper">
+        <button class="modal-review-success__button button" type="button">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
