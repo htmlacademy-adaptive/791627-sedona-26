@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -37,13 +37,13 @@
       <a class="main-header__logo" href="#">
         <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
       </a>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">
+            <a class="main-nav__link main-nav__link--current" href="#">
               Главная
             </a>
           </li>
@@ -52,7 +52,6 @@
               Фото и видео
             </a>
           </li>
-          <li></li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">
               Форма отзыва
@@ -75,7 +74,7 @@
       </picture>
     </section>
     <section class="slogan">
-      <h2 class="slogan__title">Седона — небольшой <br>городок в Аризоне, заслуживающий большего!</h2>
+      <h2 class="slogan__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="slogan__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages">
@@ -92,7 +91,7 @@
                 srcset="img/house-in-sedona-desktop.webp 1x, img/house-in-sedona-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/house-in-sedona-tablet.webp 1x, img/house-in-sedona-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/house-in-sedona.webp 1x, img/house-in-sedona.webp@2x 2x">
+              <source type="image/webp" srcset="img/house-in-sedona.webp 1x, img/house-in-sedona@2x.webp 2x">
 
               <source media="(min-width: 1200px)"
                 srcset="img/house-in-sedona-desktop.jpg 1x, img/house-in-sedona-desktop@2x.jpg 2x">
@@ -117,7 +116,7 @@
               <li class="advantages__item advantages__souvenir">
                 <div class="advantages__text-wrapper">
                   <h4 class="advantages__title">Сувениры</h4>
-                  <p class="advantages__desc">Не только китайского, но и местного производства!</p>
+                  <p class="advantages__desc">Не только китайского,<br>&nbsp; но и местного производства!</p>
                 </div>
               </li>
             </ul>
@@ -126,16 +125,16 @@
         <li class="advantages__item">
           <div class="advantages__wrapper advantages__wrapper-2">
             <div class="advantages__text-wrapper">
-              <h3 class="advantages__title">Там есть мост дьявола</h3>
+              <h3 class="advantages__title">Там есть<br>&nbsp; мост дьявола</h3>
               <span class="advantages__number">— №2 —</span>
-              <p class="advantages__desc">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              <p class="advantages__desc">Да, по нему можно пройти!<br>&nbsp; Если вы осмелитесь, конечно</p>
             </div>
             <picture>
               <source type="image/webp" media="(min-width: 1200px)"
                 srcset="img/devils-bridge-desktop.webp 1x, img/devils-bridge-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/devils-bridge-tablet.webp 1x, img/devils-bridge-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/devils-bridge.webp 1x, img/devils-bridge.webp@2x 2x">
+              <source type="image/webp" srcset="img/devils-bridge.webp 1x, img/devils-bridge@2x.webp 2x">
 
               <source media="(min-width: 768px)"
                 srcset="img/devils-bridge-desktop.jpg 1x, img/devils-bridge-desktop@2x.jpg 2x">
@@ -172,7 +171,7 @@
     <section class="search-product">
       <div class="search-product__text-wrapper">
         <h3 class="search-product__title">Заинтересовались?</h3>
-        <p class="search-product__desc">Укажите предполагаемые даты поездки, и мы покажем вам лучшиепредложения гостиниц
+        <p class="search-product__desc">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц
           в
           Седоне</p>
       </div>
@@ -217,7 +216,7 @@
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
-      <a class="copyright__link" href="#">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
         <svg class="copyright__icon" width="24" height="29" viewBox="0 0 24 29" fill="currentColor"
           xmlns="http://www.w3.org/2000/svg">

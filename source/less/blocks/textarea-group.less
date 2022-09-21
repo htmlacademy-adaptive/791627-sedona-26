@@ -1,7 +1,69 @@
 .textarea-group {
-  padding-bottom: 20px;
+  margin: 10px 0 50px;
+
+  @media (max-width: @mobile-width-only) {
+    &__legend {
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: -50px;
+        width: 320px;
+        height: 1px;
+        background-color: @light-gray-5;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
+    margin-top: 2px;
+
+    &__legend {
+      padding-top: 25px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 37px;
+        left: -200px;
+        width: 123px;
+        height: 1px;
+        background-color: @light-gray-6;
+
+        @media (min-width: @desktop-width) {
+          width: 280px;
+          top: 13px;
+          left: -350px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 37px;
+        right: -200px;
+        width: 123px;
+        height: 1px;
+        background-color: @light-gray-6;
+
+        @media (min-width: @desktop-width) {
+          width: 280px;
+          top: 13px;
+          right: -350px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 70px 57px 0 55px;
+
+    &__legend {
+      padding-top: 0;
+    }
   }
 }

@@ -8,7 +8,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 60px;
+    padding: 23px 60px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -43,9 +43,16 @@
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  padding: 24px 0 20px;
+  padding: 22px 0 20px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    padding-bottom: 28px;
+    font-size: 21px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
     font-size: 21px;
   }
 }
@@ -55,13 +62,60 @@
 
   &::placeholder {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 26px;
     color: @black;
   }
 
   @media (min-width: @desktop-width) {
-    width: 430px;
+    width: 402px;
+  }
+}
+
+.review-form__name {
+  margin-bottom: 25px;
+  position: relative;
+
+  @media (max-width: @mobile-width-only) {
+    &-legend {
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: -92px;
+        width: 320px;
+        height: 1px;
+        background-color: @light-gray-5;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -55px;
+      right: 0;
+      width: 1px;
+      height: 338px;
+      background-color: @light-gray-6;
+
+      @media (min-width: @desktop-width) {
+        right: -14px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &-legend {
+      padding-left: 10px;
+    }
+
+    & .review-form__input {
+      width: 430px;
+    }
   }
 }
 
@@ -72,8 +126,34 @@
     opacity: 0.3;
   }
 
+  @media (max-width: @mobile-width-only) {
+    &-legend {
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: -40px;
+        width: 320px;
+        height: 1px;
+        background-color: @light-gray-5;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: auto;
+
+    &-legend {
+      margin-left: -20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &-legend {
+      margin-left: -35px;
+      padding-bottom: 26px;
+    }
   }
 }
 
@@ -120,6 +200,14 @@
   border-radius: 50%;
   display: grid;
   place-content: center;
+
+  &:hover {
+    background-color: @light-gray-5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .review-form__radio-control::before {
@@ -143,10 +231,15 @@
   grid-template-columns: 46px 3fr;
   column-gap: 16px;
   align-items: center;
+  margin-bottom: 15px;
+
 
   @media (min-width: @tablet-width) {
-    width: 280px;
-    margin-bottom: 16px;
+    margin-left: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 17px 10px 52px 54px;
   }
 }
 
@@ -161,6 +254,14 @@
   border-radius: 4px;
   display: grid;
   place-content: center;
+
+  &:hover {
+    background-color: @light-gray-5;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .review-form__checkbox::before {
@@ -184,10 +285,21 @@
   grid-template-columns: 46px 3fr;
   column-gap: 16px;
   align-items: center;
+  margin-bottom: 16px;
+  margin-left: 2px;
 
   @media (min-width: @tablet-width) {
     width: 224px;
-    margin-bottom: 16px;
+    margin: 0 0 16px 2px;
+
+    &:nth-child(odd) {
+      grid-column: 2 / 3;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 184px;
+    margin-right: 22px;
   }
 }
 
@@ -209,10 +321,12 @@
 
   @media (min-width: @tablet-width) {
     width: 648px;
+    min-height: 160px;
   }
 
   @media (min-width: @desktop-width) {
     width: 768px;
+    margin-bottom: 46px;
   }
 }
 
@@ -222,12 +336,13 @@
 
   @media (min-width: @tablet-width) {
     width: 324px;
-    margin-bottom: 64px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
     width: 384px;
     margin-left: 96px;
+    margin-bottom: 72px;
   }
 }
 
@@ -239,6 +354,12 @@
   text-transform: uppercase;
   text-align: right;
   margin: 0;
+  padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    padding: 20px 0 0;
+  }
 
   @media (min-width: @desktop-width) {
     margin-right: 96px;
