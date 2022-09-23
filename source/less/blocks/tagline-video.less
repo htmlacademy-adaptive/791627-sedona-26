@@ -3,11 +3,31 @@
   font-style: normal;
   background-color: @white;
   padding: 20px 20px 0;
+  position: relative;
+
+  &::after {
+    content: url("../img/play-button.svg");
+    width: 48px;
+    height: 54px;
+    left: 144px;
+    top: 240px;
+    position: absolute;
+
+    @media (min-width: @tablet-width) {
+      left: 360px;
+      top: 470px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 575px;
+      top: 470px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 60px;
 
-    &__text {
+    .tagline-video__text {
       padding: 58px 80px 66px;
     }
   }
@@ -15,7 +35,7 @@
   @media (min-width: @desktop-width) {
     padding: 0;
 
-    &__text {
+    .tagline-video__text {
       padding: 58px 350px 66px;
     }
   }
@@ -51,6 +71,7 @@
 .tagline-video__poster {
   display: block;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 48px;
