@@ -37,21 +37,19 @@
   margin: 0;
   padding: 0 15px 32px;
   text-align: center;
+}
 
-  & br {
-    display: none;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-
-    & br {
-      display: inline;
-    }
-  }
+.search-product__desc br {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
+  padding: 0;
+
+  .search-product__desc br {
+    display: inline;
+  }
+
   .search-product__text-wrapper {
     padding: 50px 160px 42px;
   }

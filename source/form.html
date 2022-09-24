@@ -89,9 +89,9 @@
       </fieldset>
       <fieldset class="review-form__group review-form__contacts">
         <legend class="review-form__legend review-form__contacts-legend">Контактная информация:</legend>
-        <label class="review-form__label" for="phone" type="tel">Контактный телефон*:</label>
-        <input class="review-form__input input" type="number" id="phone" placeholder="Введите телефон">
-        <label class="review-form__label" for="email" type="email">Электронная почта*:</label>
+        <label class="review-form__label" for="phone">Контактный телефон*:</label>
+        <input class="review-form__input input" type="tel" id="phone" placeholder="Введите телефон">
+        <label class="review-form__label" for="email">Электронная почта*:</label>
         <input class="review-form__input input" type="email" id="email" placeholder="Введите e-mail">
       </fieldset>
       <fieldset class="review-form__group radio-group">
@@ -116,7 +116,8 @@
       </fieldset>
       <fieldset class="review-form__group textarea-group">
         <legend class="review-form__legend textarea-group__legend">Опишите свои эмоции:</legend>
-        <textarea class="review-form__textarea input" placeholder="Опишите подробно все свои восторги "></textarea>
+        <label class="visually-hidden" for="textarea">Опишите подробно все свои эмоции</label>
+          <textarea class="review-form__textarea input" placeholder="Опишите подробно все свои восторги" id="textarea"></textarea>
       </fieldset>
       <button class="review-form__button button" type="submit">Отправить отзыв</button>
       <p class="review-form__mark">* — обязательные поля</p>

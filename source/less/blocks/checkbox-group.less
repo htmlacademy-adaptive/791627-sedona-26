@@ -1,6 +1,6 @@
 .checkbox-group {
   @media (max-width: @mobile-width-only) {
-    &__legend {
+    .checkbox-group__legend {
       &::before {
         position: absolute;
         content: "";
@@ -20,7 +20,7 @@
     justify-content: center;
     column-gap: 28px;
 
-    &__legend {
+    .checkbox-group__legend {
       padding: 20px 169px 28px;
       grid-column: 1 / -1;
       position: relative;
@@ -60,7 +60,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    &__legend {
+    .checkbox-group__legend {
       padding: 20px 310px 60px 260px;
     }
 
